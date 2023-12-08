@@ -1,34 +1,56 @@
 ---
 title: Mediatek Formation
-publishDate: 2020-03-02 00:00:00
+publishDate: 2023-12-01 00:00:00
 img: /assets/mediatek.png
 img_alt: Photo de mon application
-description: |
-  Cette application à été conçue pour héberger des formations et les structurer à travers des playlists
+description: Site consacré aux formations en ligne, vous allez pouvoir vous former dans différents domaines informatiques gratuitement et directement en ligne
 tags:
   - PHP
   - Symfony
+  - Twig
+  - Doctrine
 ---
+> Contexte
 
-## Level-two heading
+J'ai travaillé sur ce projet dans la continuité d'une création déjà existante. Ce qui signifie que j'ai récupéré ce projet pour lui ajouter des modifications.
+Ce projet m'a permis de travailler sur les axes suivants : 
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+- Concevoir et développer une solution applicative
+- Assurer la maintenance corrective ou évolutive d’une solution applicative
+- Gérer les données
+<p></p>
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+- Gérer le patrimoine informatique
+- Répondre aux incidents et aux demandes d’assistance et d’évolution
+- Développer la présence en ligne de l’organisation
+- Travailler en mode projet
+- Mettre à disposition des utilisateurs un service informatique
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+<strong>Les travaux qui m'ont été demandé sont les suivants : </strong>
 
-### Level-three heading
+- Nettoyage du code avec sonarlint
+- Code de la partie back-office 
+- Réalisations de multiples tests
+- Publication et déploiement du site
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+<h5>Liens précédant mon intervention</h5>
 
-### Level-three heading
+- <a href="" onclick="window.open('/assets/contexte.pdf')">Le contexte</a>
+- <a href="" onclick="window.open('/assets/contrat.pdf')">Le contrat de développement</a>
+- <a href="" onclick="window.open('/assets/cahier.pdf')">Le cahier des charges</a>
+- <a href="" onclick="window.open('/assets/missions.pdf')">Les différentes missions</a>
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+<h5>Liens après mon intervention</h5>
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+- Le compte rendu de toutes les tâches accomplies <a href="" onclick="window.open('/assets/Bilan.pdf')">ici</a>
+- <a href="" onclick="window.open('/assets/recette.pdf')">PV de recette</a>
+- Le dépôt distant sur github <a href="" onclick="window.open('https://github.com/Yuvem10/mediatekformation')">ici</a>
+- L'adresse du site : https://mediatekformation.shop/
 
-#### Level-four heading
 
-- We noted this
-- And also this other point
+>Les documentations
+
+Documentation technique se trouve <a href="" onclick="window.open('https://mediatekformation.shop/doc/')">ici</a>.
+
+<strong>Documentation utilisateur en vidéo : </strong>
+<iframe src="/assets/video.mkv"  title="documentation utilisateur" width="750" height="450" allowfullscreen></iframe>

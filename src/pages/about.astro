@@ -10,13 +10,17 @@ import Hero from '../components/Hero.astro';
 		<main class="wrapper about">
 			<Hero
 				title="A propos de moi"
-				tagline="Merci d'être passé. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
+				tagline=""
 			>
+			<img
+				width ="1553"
+				height="873" 
+				src="/assets/photo.jpg"
+				alt="code"
+			/>
 			</Hero>
-			
-
 			<section>
-				<h2 class="section-title">Histoire</h2>
+				<h2 class="section-title"><u>Histoire</u></h2>
 				<div class="content">
 					<p>
 						Je suis un jeune étudiant exerçant un BTS SIO (Service Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers)au CNED. Ce qui signifie que je suis plus ou moins en formation de développeur.
@@ -27,16 +31,24 @@ import Hero from '../components/Hero.astro';
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Parcours</h2>
+				<h2 class="section-title"><u>Parcours</u></h2>
 				<div class="content">
 					<p>Titulaire d'un Bac STMG option Ressources Humaines, je me suis dirigé dans cette filière informatique, en parallèle de cela j'excerçais des missions d'interim dans le BTP en tant que manoeuvre, aujourd'hui je réalise également des prestations informatiques en tant qu'auto-entrepreneur.</p>
-					<p>Par le passé j'ai pu exercer un stage en tant que vendeur/cordeur dans un magasin de tennis, un stage dans l'entreprise INGEFOX ou j'ai pu approfondir mes connaissances dans le domaine du dévelopement d'application. Vous pouvez télécharger mon cv <a href="" onclick="window.open('/assets/Cv.pdf')">ici</a>.</p>
+					<p>Par le passé j'ai pu exercer un stage en tant que vendeur/cordeur dans un magasin de tennis, un stage dans l'entreprise INGEFOX ou j'ai pu approfondir mes connaissances dans le domaine du développement d'applications. Vous pouvez télécharger mon cv <a href="" onclick="window.open('/assets/Cv.pdf')">ici</a>.</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Compétences</h2>
+				<h2 class="section-title"><u>Compétences</u></h2>
 				<div class="content">
-					<p></p>
+					<p><strong>Langages de programmation : </strong></p>
+					
+						<p>php, javascript, html/css, c#, python, twig, java</p>
+						<br />
+					<p><strong>Frameworks : </strong></p>
+						<p>symfony, astro</p>
+						<br />
+					<p><strong>Plateformes et outils : </strong></p>
+						<p>git, github, firebase, docker, doctrine, wordpress</p>
 				</div>
 			</section>
 		</main>
