@@ -1,0 +1,74 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>SonarQube</h2>
+		<p>Mise en place d'une solution de qualimétrie en continu de code (SonarQube) dans une optique d'aider à la détection, la classification et la résolution de défaut dans le code source, ajout de règles de codage personalisées (code en java) ainsi que la création d'une documentation à destination de mes collaborateurs. 
+		</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Tests OpenAI</h2>
+		<p>Mise en place d'une solution de dialogue à l'aide de l'api d'OPENAI afin de réaliser une démonstration des possibilités de l'api. Codage en PHP, HTML, CSS, Javascript. </p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Intégration dans un projet</h2>
+		<p>Intégration d'un module chatGPT sur un projet. Le module permettant d'éxécuter des requêtes de remplissage et d'extraction de champs définies au préalable par l'utilisateur de l'application. </p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Formulaires Batify</h2>
+		<p>Demande de création de formulaire entraînant la création d'un PDF concernant des fiches d'interventions pour les ouvriers sur chantier. Utilisation d'HTML, CSS, Javascript, PHP. </p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Tests Fonctionnels</h2>
+		<p>Tests d'une application web, détection des éventuels problèmes suivant un plan de test précis, rédaction de tickets d'incidents. </p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
+

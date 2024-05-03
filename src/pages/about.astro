@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+
+---
+
+<BaseLayout title="A propos | Matéo" description="A propos de moi">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="A propos de moi"
+				tagline=""
+			>
+			<img
+				width ="1553"
+				height="873" 
+				src="/assets/photo.jpg"
+				alt="code"
+			/>
+			</Hero>
+			<section>
+				<h2 class="section-title"><u>Histoire</u></h2>
+				<div class="content">
+					<p>
+						Je suis un jeune étudiant exerçant un BTS SIO (Service Informatiques aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers)au CNED. Ce qui signifie que je suis plus ou moins en formation de développeur.
+					</p>
+					<br>
+					<p>
+						Passioné d'informatique je me suis tourné vers ce BTS et en particulier cette option pour aquérir plus de connaissances dans ce domaine et exprimer ma créativité à travers différents projets.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title"><u>Parcours</u></h2>
+				<div class="content">
+					<p>Titulaire d'un Bac STMG option Ressources Humaines, je me suis dirigé dans cette filière informatique, en parallèle de cela j'excerçais des missions d'interim dans le BTP en tant que manoeuvre, aujourd'hui je réalise également des prestations informatiques en tant qu'auto-entrepreneur.</p> <br>
+					<p>Par le passé j'ai pu exercer un stage en tant que vendeur/cordeur dans un magasin de tennis, un stage dans l'entreprise INGEFOX ou j'ai pu approfondir mes connaissances dans le domaine du développement d'applications. Vous pouvez télécharger mon cv <a href="" onclick="window.open('/assets/Cv.pdf')">ici</a>.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title"><u>Compétences</u></h2>
+				<div class="content">
+					<p><strong>Langages de programmation : </strong></p>
+				
+						<p>
+							php, javascript, html/css, c#, python</p>
+						<br />
+					<p><strong>Frameworks : </strong></p>
+						<p>symfony, astro, code igniter</p>
+						<br />
+					<p><strong>Plateformes et outils : </strong></p>
+						<p>github, wordpress, visual studio, VS code, WampServer</p>
+				</div>
+			</section>
+		</main>
+		
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

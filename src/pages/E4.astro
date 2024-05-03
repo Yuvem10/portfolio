@@ -1,0 +1,383 @@
+---
+import { getCollection } from "astro:content";
+
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Component Imports
+import CallToAction from "../components/CallToAction.astro";
+import Grid from "../components/Grid.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import Pill from "../components/Pill.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import Ap from "../components/Ap.astro";
+import Missions2 from "../components/Missions2.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Missions from "../components/Missions.astro";
+
+// Content Fetching: List four most recent work projects
+const projects = (await getCollection("work"))
+	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+	.slice(0, 4);
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<BaseLayout>
+	<div class="stack gap-20 lg:gap-48">
+		<div class="wrapper stack gap-8 lg:gap-20">
+			<header class="hero">
+				<Hero
+					title="Epreuve E4"
+					tagline='Cette épreuve orale est une soutenance de projet professionnel. Elle se déroule en deux parties : une présentation de 10 minutes suivie d’un entretien de 30 minutes. Elle évalue les compétences du bloc "Support et mise à disposition de services informatique".'
+					align="start"
+				/>
+				<img
+					width="480"
+					height="620"
+					src="/assets/tableau.png"
+					alt="Cliquez pour l'ouvrir en PDF"
+					onclick="window.open('/assets/tableau.pdf')"
+				/>
+			</header>
+		</div>
+		<div style="max-width:85%; margin: auto;">
+			<Ap />
+		</div>
+		<CallToAction />
+		<Hero title="Présentation de l'entreprise" tagline="" align="center" />
+		<div style="display:flex; margin-left:20px; margin-right:20px;">
+			<img
+				width="600"
+				height="620"
+				src="/assets/ingefox.png"
+				style="margin-left:20px; margin-right:40px; border-radius: 1.5rem; box-shadow: var(--shadow-md);"
+			/>
+			<div>
+				<br />
+				<h5>
+					J'ai effectué mes deux stages au sein de l'entreprise
+					INGEFOX situé à Bordeaux dans le quartier Belcier.
+				</h5>
+				<br />
+				<br />
+				<h5>
+					Ingefox accompagne les entreprises dans la création et le
+					développement de logiciels métiers sur mesure, en fonction
+					de leurs besoins, de leurs attentes et de leurs usages.
+				</h5>
+				<br />
+				<br />
+				<h5>
+					Chaque entreprise a des besoins spécifiques et précis, c’est
+					pourquoi ils s'engagent à fournir un haut niveau de qualité
+					dans le déploiement de vos solutions.
+				</h5>
+			</div>
+		</div>
+		<div style="display:flex;">
+			<div style="margin-left: 40px;">
+				<br />
+				<h5>
+					L'équipe est composée actuellement de 7 membres. Un
+					directeur général, un directeur technique, un commercial, un
+					lead developpeur ainsi que deux développeurs et un
+					alternant.
+				</h5>
+				<br />
+				<br />
+				<h5>
+					L'entreprise se spécialise également dans l'éco conception,
+					cela consiste à concevoir des logiciels, matériels et
+					services numériques de manière à minimiser leur impact
+					environnemental, en réduisant la consommation d'énergie,
+					l'utilisation de ressources et la production de déchets
+					électroniques.
+				</h5>
+				<br />
+				<br />
+				<h5>
+					Un bureau ainsi qu'un poste informatique m'ont été atribué,
+					pour réaliser les différentes missions qu'ils m'ont confiées
+					au sein de ces deux stages.
+				</h5>
+			</div>
+			<img
+				width="600"
+				height="620"
+				src="/assets/batiment.png"
+				style="margin-left: 20px; 
+			margin-right: 40px; border-radius: 1.5rem; box-shadow: var(--shadow-md);"
+			/>
+		</div>
+		<CallToAction />
+		<Hero
+			title="Stage de première année"
+			align="center"
+			tagline="Réalisé du 12 juin 2023 au 7 juillet 2023"
+		/>
+		<div style="max-width:85%; margin: auto;">
+			<Missions />
+		</div>
+		<section style="display:flex; margin-left: 60px; margin: auto;">
+			<div>
+				<div class="content">
+					<div>
+						<h3><u>Les documents :</u></h3>
+						<br />
+						- <a href="/assets/bilan1.pdf">Compte rendu du stage</a><br />
+						- <a href="/assets/stagebilan.pdf">Fiche bilan de stage</a><br />
+						- <a href="/assets/electron.pdf">Documentation Electron</a><br />
+
+					</div>
+					<br />
+					<br />
+					<h3><u>Les compétences :</u></h3>
+					<br />
+					<h5>
+						Répondre aux incidents et aux demandes d’assistance et
+						d’évolution
+					</h5>
+					<br />
+					▪ Collecter, suivre et orienter des demandes<br />
+					▪ Traiter des demandes concernant les applications<br />
+					<br />
+					<h5>
+						Développer la présence en ligne de l’organisation
+					</h5><br />
+					▪ Participer à l’évolution d’un site Web exploitant les données
+					de l’organisation<br />
+					<br />
+					<h5>Travailler en mode projet</h5><br />
+					▪ Analyser les objectifs et les modalités d’organisation d’un
+					projet<br />
+					▪ Planifier les activités
+					<br />
+
+					<br />
+
+					<h5>
+						Mettre à disposition des utilisateurs un service
+						informatique
+					</h5><br />
+					▪ Déployer un service
+				</div>
+			</div>
+		</section>
+		<CallToAction />
+
+		<Hero
+			title="Stage de deuxième année"
+			align="center"
+			tagline="Réalisé du 29 janvier 2024 au 8 mars 2024"
+		/>
+		<div style="max-width:85%; margin: auto;">
+			<Missions2 />
+		</div>
+		<section style="display:flex; margin-left: 60px; margin: auto;7">
+			<div>
+				<div class="content">
+					<div>
+						<h3><u>Les documents :</u></h3>
+						<br />
+						- <a href="/assets/bilan2.pdf">Compte rendu du stage</a><br />
+						- <a href="/assets/bilanstage.pdf">Fiche bilan de stage</a><br />
+						- <a href="https://github.com/Yuvem10/sonarqube">Repository SonarQube</a><br />
+						- <a href="https://github.com/Yuvem10/ChatGPT">Repository OpenAI</a><br />
+					</div>
+					<br />
+					<br />
+					<h3><u>Les compétences :</u></h3>
+					<br />
+					<h5>Gérer le patrimoine informatique</h5>
+					<br />
+					▪ Mettre en place et vérifier les niveaux d’habilitation associés
+					à un service<br />
+					<br />
+					<h5>
+						Répondre aux incidents et aux demandes d’assistance et
+						d’évolution
+					</h5>
+					<br />
+					▪ Collecter, suivre et orienter des demandes<br />
+					▪ Traiter des demandes concernant les applications<br />
+					<br />
+					<h5>
+						Développer la présence en ligne de l’organisation
+					</h5><br />
+					▪ Participer à l’évolution d’un site Web exploitant les données
+					de l’organisation<br />
+					<br />
+					<h5>Travailler en mode projet</h5><br />
+					▪ Analyser les objectifs et les modalités d’organisation d’un
+					projet<br />
+					▪ Planifier les activités
+					<br />
+
+					<br />
+					<h5>
+						Mettre à disposition des utilisateurs un service
+						informatique
+					</h5><br />
+					▪ Déployer un service
+					<br />
+					<br />
+					<h5>Organiser son développement professionnel</h5>
+					<br />
+					▪ Mettre en place son environnement d’apprentissage personnel<br
+					/>
+					<br />
+				</div>
+			</div>
+		</section>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.roles {
+		display: none;
+	}
+
+	.hero img {
+		aspect-ratio: 5 / 4;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	@media (min-width: 50em) {
+		.hero {
+			display: grid;
+			grid-template-columns: 6fr 4fr;
+			padding-inline: 2.5rem;
+			gap: 3.75rem;
+		}
+
+		.roles {
+			margin-top: 0.5rem;
+			display: flex;
+			gap: 0.5rem;
+		}
+
+		.hero img {
+			aspect-ratio: 3 / 4;
+			border-radius: 4.5rem;
+			object-fit: cover;
+		}
+	}
+
+	/* ====================================================== */
+
+	.section {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.with-background {
+		position: relative;
+	}
+
+	.with-background::before {
+		--hero-bg: var(--bg-image-subtle-2);
+
+		content: "";
+		position: absolute;
+		pointer-events: none;
+		left: 50%;
+		width: 100vw;
+		aspect-ratio: calc(2.25 / var(--bg-scale));
+		top: 0;
+		transform: translateY(-75%) translateX(-50%);
+		background:
+			url("/assets/backgrounds/noise.png") top center/220px repeat,
+			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
+			var(--gray-999);
+		background-blend-mode: overlay, normal, normal, normal;
+		mix-blend-mode: var(--bg-blend-mode);
+		z-index: -1;
+	}
+
+	.with-background.bg-variant::before {
+		--hero-bg: var(--bg-image-subtle-1);
+	}
+
+	.section-header {
+		justify-self: center;
+		text-align: center;
+		max-width: 50ch;
+		font-size: var(--text-md);
+		color: var(--gray-300);
+	}
+
+	.section-header h3 {
+		font-size: var(--text-2xl);
+	}
+
+	@media (min-width: 50em) {
+		.section {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: "header header header header" "gallery gallery gallery gallery";
+			gap: 5rem;
+		}
+
+		.section.with-cta {
+			grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
+		}
+
+		.section-header {
+			grid-area: header;
+			font-size: var(--text-lg);
+		}
+
+		.section-header h3 {
+			font-size: var(--text-4xl);
+		}
+
+		.with-cta .section-header {
+			justify-self: flex-start;
+			text-align: left;
+		}
+
+		.gallery {
+			grid-area: gallery;
+		}
+
+		.cta {
+			grid-area: cta;
+		}
+	}
+
+	/* ====================================================== */
+
+	.mention-card {
+		display: flex;
+		height: 7rem;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		color: var(--gray-300);
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	@media (min-width: 50em) {
+		.mention-card {
+			border-radius: 1.5rem;
+			height: 9.5rem;
+		}
+	}
+</style>

@@ -1,0 +1,72 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Mon auto-entreprise</h2>
+		<p>
+			En novembre 2023 l'entreprise pour qui j'avais fait mon premier stage m'a proposé de réaliser des travaux rémunérés pour eux. Des plans de tests à suivre. 
+			J'ai donc du m'inscrire en tant qu'auto-entrepreneur pour pouvoir facturer mes prestations. J'ai donc créé mon entreprise de services informatiques.
+		</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>BTS SIO</h2>
+		<p>Il s'agit d'une formation de niveau bac+2 dans le domaine de l'informatique. Cette filière vise à former des professionnels capables d'assurer la gestion et le support informatique au sein des organisations.
+
+			Le BTS SIO est divisé en deux options : SLAM et SISR. Soit Solutions Logicielles et Applications Métiers et Solutions d'Infrastructure, Systèmes et Réseaux</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Veille Technologique</h2>
+		<p>
+			La veille technologique en informatique implique la surveillance constante des avancées pour anticiper les évolutions, innover, garantir la sécurité et rester compétitif. 
+			Pour plus d'informations voir <a href="/work/veille">la page de veille technologique</a>.
+		</p>
+	</div>
+	
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
+
